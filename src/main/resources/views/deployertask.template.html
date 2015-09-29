@@ -1,0 +1,20 @@
+<div class="form_item_block">
+    <label for="config">Configuration file:<span class="asterisk">*</span></label>
+    <input id="config" name="config" type="text" ng-model="Config" ng-required="true" />
+    <span class="form_error" ng-show="GOINPUTNAME[config].$error.server">{{ GOINPUTNAME[config].$error.server }}</span>
+</div>
+<div class="form_item_block">
+    <label for="component">Component:<span class="asterisk">*</span></label>
+    <input id="component" name="component" type="text" ng-model="Component" ng-required="true" />
+    <span class="form_error" ng-show="GOINPUTNAME[component].$error.server">{{ GOINPUTNAME[component].$error.server }}</span>
+</div>
+
+<div class="form_item_block">
+    <label>Flags:</label>
+    <div class="checkbox_row">
+        <!-- hack to make checkboxes work in Go Angular templates -->
+        <input id="redeployHack" type="checkbox" ng-model="RedeployHack" ng-init="RedeployHack = Redeploy" ng-change="Redeploy = RedeployHack" ng-true-value="true" ng-false-value="false" />
+        <input id="redeploy" type="hidden" ng-model="Redeploy" value="{{ Redeploy }}" />
+        <label for="redeploy">Redeploy</label>
+    </div>
+</div>

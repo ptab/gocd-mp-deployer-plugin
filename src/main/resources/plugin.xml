@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<go-plugin id="mp-deployer-task" version="1">
+    <about>
+        <name>Marktplaats Deployer Task</name>
+        <version>${project.version}</version>
+        <target-go-version>15.2</target-go-version>
+        <description>${project.description}</description>
+        <vendor>
+            <name>ptab</name>
+            <url>https://github.com/ptab</url>
+        </vendor>
+        <target-os>
+            <value>Linux</value>
+            <value>Windows</value>
+            <value>Mac OS X</value>
+        </target-os>
+    </about>
+</go-plugin>
